@@ -1,0 +1,115 @@
+{
+    "1": {
+        "1": {
+            "event": "DropRandomItemEvent",
+            "desc": "目前你处于赛道地图A的第1格 你遇到了一个穿着奇怪的的人 他跟你打了个招呼后你陷入了昏迷 醒来后发现了一张字条：感谢馈赠 你马上去翻你的背包，发现自己丢失了一件道具【随机一件道具丢失】"
+        },
+        "2": {
+            "event": "DropRandomItemEvent",
+            "desc": "目前你处于赛道地图A的第2格 你遇到了一个穿着奇怪的的人 他跟你打了个招呼后你陷入了昏迷 醒来后发现了一张字条：感谢馈赠 你马上去翻你的背包，发现自己丢失了一件道具【随机一件道具丢失】"
+        },
+        "3": {
+            "event": "DropRandomItemEvent",
+            "desc": "目前你处于赛道地图A的第3格 你遇到了一个穿着奇怪的的人 他跟你打了个招呼后你陷入了昏迷 醒来后发现了一张字条：感谢馈赠 你马上去翻你的背包，发现自己丢失了一件道具【随机一件道具丢失】"
+        },
+        "4": {
+            "event": "DropRandomItemEvent",
+            "desc": "目前你处于赛道地图A的第4格 你遇到了一个穿着奇怪的的人 他跟你打了个招呼后你陷入了昏迷 醒来后发现了一张字条：感谢馈赠 你马上去翻你的背包，发现自己丢失了一件道具【随机一件道具丢失】"
+        },
+        "5": {
+            "event": "DropRandomItemEvent",
+            "desc": "目前你处于赛道地图A的第5格 你遇到了一个穿着奇怪的的人 他跟你打了个招呼后你陷入了昏迷 醒来后发现了一张字条：感谢馈赠 你马上去翻你的背包，发现自己丢失了一件道具【随机一件道具丢失】"
+        },
+        "6": {
+            "event": "MoveEvent",
+            "desc": "目前你处于赛道地图A的第6格 在这里遇上了一只巨型虫族 作为星球专业培养常年征战虫族的战士 你拿起武器耗尽力气打败了它【体力归零】",
+            "step": "-2"
+        },
+        "7": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "8": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "9": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "10": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "11": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "12": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "13": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "14": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "15": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "16": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "17": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "18": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "19": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "20": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "21": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "22": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "23": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "24": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "25": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        }
+    },
+    "2": {
+        "1": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        },
+        "2": {
+            "event": "NonthingEvent",
+            "desc": "describe"
+        }
+    }
+}
