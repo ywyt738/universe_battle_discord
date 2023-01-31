@@ -1,6 +1,5 @@
 """single pattern bot"""
 import discord
-from discord.ext import commands
 
 from game import config
 from game.log import logger
@@ -28,7 +27,7 @@ async def on_ready():
 async def on_application_command_error(ctx: discord.ApplicationContext, error):
     """命令错误处理"""
     match type(error).__name__:
-        case "PlayerExist":
+        case "PlayerExist" | "PlayerNotExist":
             await ctx.respond(error)
         case "MissingRole":
             await ctx.respond("请先加入游戏。")
