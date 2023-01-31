@@ -5,31 +5,14 @@ from discord.ext import commands
 from game import config
 from game.log import logger
 
-from .task import clear_buff
+from .task import clear_buff, reset_ap
 
 intents = discord.Intents.default()
 intents.members = True  # pylint: disable=assigning-non-slot
 intents.message_content = True  # pylint: disable=assigning-non-slot
 
 
-class HelpCommand(commands.DefaultHelpCommand):
-    """帮助命令"""
-
-    def __init__(self):
-        super().__init__()
-        self.no_category = "其他"
-        self.command_attrs["help"] = "显示命令帮助"
-
-    # def get_ending_note(self):
-    #     return "银河星云之战@UG"
-
-
-BOT = commands.Bot(
-    command_prefix="g.",
-    help_command=HelpCommand(),
-    intents=intents,
-    proxy=config.proxy,
-)
+BOT = discord.Bot(intents=intents, proxy=config.proxy)
 
 
 # 事件处理
@@ -38,13 +21,16 @@ async def on_ready():
     """机器人ready"""
     logger.info(f"Bot have logged in as {BOT.user}")
     clear_buff.start()
+    reset_ap.start()
 
 
 @BOT.event
-async def on_command_error(ctx, error):
+async def on_application_command_error(ctx: discord.ApplicationContext, error):
     """命令错误处理"""
     match type(error).__name__:
         case "PlayerExist":
-            await ctx.reply(error)
+            await ctx.respond(error)
+        case "MissingRole":
+            await ctx.respond("请先加入游戏。")
         case _:
             logger.error(error)

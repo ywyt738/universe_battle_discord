@@ -1,115 +1,297 @@
 {
     "1": {
         "1": {
-            "event": "DropRandomItemEvent",
-            "desc": "目前你处于赛道地图A的第1格 你遇到了一个穿着奇怪的的人 他跟你打了个招呼后你陷入了昏迷 醒来后发现了一张字条：感谢馈赠 你马上去翻你的背包，发现自己丢失了一件道具【随机一件道具丢失】"
+            "event": "TrapEvent",
+            "desc": "目前你处于赛道地图1的第1格 恭喜你 在赛道上踩到陷阱格 需要一点时间解除控制【陷阱停留2小时】",
+            "duration": 120
         },
         "2": {
-            "event": "DropRandomItemEvent",
-            "desc": "目前你处于赛道地图A的第2格 你遇到了一个穿着奇怪的的人 他跟你打了个招呼后你陷入了昏迷 醒来后发现了一张字条：感谢馈赠 你马上去翻你的背包，发现自己丢失了一件道具【随机一件道具丢失】"
+            "event": "NonthingEvent",
+            "desc": "目前你处于赛道地图1的第2格 你这边没有发生任何的情况 快继续前进吧"
         },
         "3": {
-            "event": "DropRandomItemEvent",
-            "desc": "目前你处于赛道地图A的第3格 你遇到了一个穿着奇怪的的人 他跟你打了个招呼后你陷入了昏迷 醒来后发现了一张字条：感谢馈赠 你马上去翻你的背包，发现自己丢失了一件道具【随机一件道具丢失】"
+            "event": "GetItemEvent",
+            "desc": "目前你处于赛道地图1的第3格 你在这里发现了一个遗留下来的道具包 打开一看是一支体力药水 你真是太幸远了！",
+            "item": "体力药水",
+            "count": 1
         },
         "4": {
-            "event": "DropRandomItemEvent",
-            "desc": "目前你处于赛道地图A的第4格 你遇到了一个穿着奇怪的的人 他跟你打了个招呼后你陷入了昏迷 醒来后发现了一张字条：感谢馈赠 你马上去翻你的背包，发现自己丢失了一件道具【随机一件道具丢失】"
+            "event": "ActionPointEvent",
+            "desc": "目前你处于赛道地图1的第4格 在这里遇上了一只巨型虫族 作为星球专业培养常年征战虫族的战士 你拿起武器耗尽力气打败了它【体力归零】",
+            "ap": "0"
         },
         "5": {
-            "event": "DropRandomItemEvent",
-            "desc": "目前你处于赛道地图A的第5格 你遇到了一个穿着奇怪的的人 他跟你打了个招呼后你陷入了昏迷 醒来后发现了一张字条：感谢馈赠 你马上去翻你的背包，发现自己丢失了一件道具【随机一件道具丢失】"
+            "event": "MoveEvent",
+            "desc": "目前你处于赛道地图1的第5格 不小心进入了一个小型传送门，你找到了捷径，【前进2格】",
+            "step": 2
         },
         "6": {
             "event": "MoveEvent",
-            "desc": "目前你处于赛道地图A的第6格 在这里遇上了一只巨型虫族 作为星球专业培养常年征战虫族的战士 你拿起武器耗尽力气打败了它【体力归零】",
-            "step": "-2"
+            "desc": "目前你处于赛道地图1的第6格 你看到了一群巨型虫族而此刻只有你一人 还是快跑吧【后退1格】",
+            "step": -1
         },
         "7": {
-            "event": "NonthingEvent",
-            "desc": "describe"
+            "event": "DropRandomItemEvent",
+            "desc": "目前你处于赛道地图1的第7格 你遇到了一个穿着奇怪的的人 他跟你打了个招呼后你陷入了昏迷 醒来后发现了一张字条：感谢馈赠 你马上去翻你的背包，发现自己了一件道具【随机一件道具丢失】"
         },
         "8": {
-            "event": "NonthingEvent",
-            "desc": "describe"
+            "event": "DropDropRandomItemWithoutEnoughActionPointEvent",
+            "desc": "目前你处于赛道地图1的第8格 你看到了一个银河星人正在和一个星云星人吵架，嗯？同胞有难，这怎么行！你果断上去帮你的同胞吵赢了这个架 在口水战大战三百回合这个过程中 你额外花费了1点体力【如果体力不足随机扣掉一件道具作为支付】",
+            "decrease_ap": 1
         },
         "9": {
             "event": "NonthingEvent",
-            "desc": "describe"
+            "desc": "目前你处于赛道地图1的第9格 没有发生任何的情況，快继续前迸吧"
         },
         "10": {
-            "event": "NonthingEvent",
-            "desc": "describe"
+            "event": "GetItemEvent",
+            "desc": "目前你处于赛道地图1的第10格 你在这里发现了一个遗留下来的道具包 打开一看是一支负面buff消除剂你真是太幸运了！",
+            "item": "负面buff消除剂",
+            "count": 1
         },
         "11": {
             "event": "NonthingEvent",
-            "desc": "describe"
+            "desc": "目前你处于赛道地图1的第11格 你发现了一张疑似同胞遗留下来的字条：前面有危险 推荐使用传送门"
         },
         "12": {
-            "event": "NonthingEvent",
-            "desc": "describe"
+            "event": "LocaionEvent",
+            "desc": "目前你处于赛道地图1的第12格 恭喜你 进入了时空隧道 正在传送中。 恭喜你 回到了初始点",
+            "cell": 0
         },
         "13": {
-            "event": "NonthingEvent",
-            "desc": "describe"
+            "event": "LocaionEvent",
+            "desc": "目前你处于赛道地图1的第13格 恭喜你 进入了时空隧道 正在传送中。恭喜你 回到了赛道地图1的第二格",
+            "cell": 2
         },
         "14": {
             "event": "NonthingEvent",
-            "desc": "describe"
+            "desc": "目前你处于赛道地图1的第14格 没有发生任何的情况，快继续前进吧"
         },
         "15": {
-            "event": "NonthingEvent",
-            "desc": "describe"
+            "event": "TrapEvent",
+            "desc": "目前你处于赛道地图1的第15格 长途跋涉让你感觉很累也很困 你想 你该休息一会再出发 【强制休息15分】",
+            "duration": 15
         },
         "16": {
-            "event": "NonthingEvent",
-            "desc": "describe"
+            "event": "TrapEvent",
+            "desc": "目前你处于赛道地图1的第16格 恭喜你 在赛道上踩到陷阱格 需要一点时间解除控制【陷阱停留30分钟】",
+            "duration": 30
         },
         "17": {
             "event": "NonthingEvent",
-            "desc": "describe"
+            "desc": "目前你处于赛道地图1的第17格 没有发生任何的情况，快继续前进吧"
         },
         "18": {
             "event": "NonthingEvent",
-            "desc": "describe"
+            "desc": "目前你处于赛道地图1的第18格 没有发生任何的情况，快继续前进吧"
         },
         "19": {
             "event": "NonthingEvent",
-            "desc": "describe"
+            "desc": "目前你处于赛道地图1的第19格 没有发生任何的情况，快继续前进吧"
         },
         "20": {
-            "event": "NonthingEvent",
-            "desc": "describe"
+            "event": "MoveEvent",
+            "desc": "目前你处于赛道地图1的第20格 不小心进入了一个小型传送门，你找到了捷径，【前进2格】",
+            "step": 2
         },
         "21": {
             "event": "NonthingEvent",
-            "desc": "describe"
+            "desc": "目前你处于赛道地图1的第21格 没有发生任何的情况，快继续前迸吧"
         },
         "22": {
-            "event": "NonthingEvent",
-            "desc": "describe"
+            "event": "GetItemEvent",
+            "desc": "目前你处于赛道地图1的第22格 恭喜你 幸运报表捡到了一个致幻剂",
+            "item": "致幻剂",
+            "count": 1
         },
         "23": {
-            "event": "NonthingEvent",
-            "desc": "describe"
+            "event": "DeathOrAliveEvent",
+            "desc": "目前你处于赛道地图1的第23格 你误闯了一个神秘的地方 有两道门 左边的门上挂着的牌匾写着生门 右边门上挂着的牌匾写着死门 最上面还有个提示 猜猜看我有没有把牌匾调换？\n请问你的选择是？",
+            "alive": {
+                "key": "生门",
+                "event": "LocaionEvent",
+                "desc": "生门：恭喜你 选错了 你回到了初始点",
+                "cell": 0
+            },
+            "death": {
+                "key": "死门",
+                "event": "NonthingEvent",
+                "desc": "死门：恭喜你 选对了 无事发生 快快继续前进吧"
+            }
         },
         "24": {
-            "event": "NonthingEvent",
-            "desc": "describe"
+            "event": "DeathOrAliveEvent",
+            "desc": "目前你处于赛道地图1的第24格 你误闯了一个神秘的地方 有两道门 左边的门上挂着的牌匾写着生门 右边门上挂着的牌匾写着死门 最上面还有个提示 猜猜看我有没有把牌匾调换？\n请问你的选择是？",
+            "alive": {
+                "key": "生门",
+                "event": "NonthingEvent",
+                "desc": "生门：恭喜你 选对了 无事发生 快快继续前进吧"
+            },
+            "death": {
+                "key": "死门",
+                "event": "LocaionEvent",
+                "desc": "死门：恭喜你 选错了 你回到了初始点",
+                "cell": 0
+            }
         },
         "25": {
-            "event": "NonthingEvent",
-            "desc": "describe"
+            "event": "PortalEvent",
+            "desc": "恭喜你 来到赛道地图1的最后一格 你走进了传送门。正在传送至 --地图2"
         }
     },
     "2": {
         "1": {
             "event": "NonthingEvent",
-            "desc": "describe"
+            "desc": "目前你处于赛道地图2的第1格 这里迷雾缭绕 让人看不清楚 战士！请你一定小心谨慎"
         },
         "2": {
+            "event": "DropDropRandomItemWithoutEnoughActionPointEvent",
+            "desc": "目前你处于赛道地图2的第2格 你遇到了一只致幻兽 你迷失了方向 走了很久才走出来【额外消耗体力x1 体力不足将随机扣除一件道具】",
+            "decrease_ap": 1
+        },
+        "3": {
+            "event": "MoveEvent",
+            "desc": "目前你处于赛道地图2的第3格 你看到了一群巨型虫族 而此刻只有你一人 还是快跑吧【后退1格】",
+            "step": -1
+        },
+        "4": {
             "event": "NonthingEvent",
-            "desc": "describe"
+            "desc": "目前你处于赛道地图2的第4格 这里的雾很大 你看到前面好像有休息站点 你快步跑去 发现是海市蜃楼"
+        },
+        "5": {
+            "event": "BuffEvent",
+            "desc": "目前你处于赛道地图2的第5格 你收到不明攻击 【你被套上虚弱buff 前进需要消耗2倍体力值持续12小时】",
+            "buff_name": "虚弱",
+            "duration": 720
+        },
+        "6": {
+            "event": "NonthingEvent",
+            "desc": "目前你处于赛道地图2的第6格 这里迷雾缭绕 让人看不清楚 战士！请你一定小心谨慎"
+        },
+        "7": {
+            "event": "GetItemEvent",
+            "desc": "目前你处于赛道地图2的第7格 你在这里发现了一个遗留下来的道具包 打开一看是一支致幻剂 你真是太幸运了! ",
+            "item": "致幻剂",
+            "count": 1
+        },
+        "8": {
+            "event": "ActionPointEvent",
+            "desc": "目前你处于赛道地图2的第8格 你来到了一处休息站点 你美美的睡了一觉【恢复体力满级（当前体力：5）】",
+            "ap": "5"
+        },
+        "9": {
+            "event": "NonthingEvent",
+            "desc": "目前你处于赛道地图2的第9格 这里迷雾缭绕 让人看不清楚 战士！请你一定小心谨慎"
+        },
+        "10": {
+            "event": "NonthingEvent",
+            "desc": "目前你处于赛道地图2的第10格 你看到了一个传送门 你是否要进去？",
+            "alive": {
+                "key": "不进去",
+                "event": "NonthingEvent",
+                "desc": "无事发生 快继续前进吧"
+            },
+            "death": {
+                "key": "进去",
+                "event": "LocaionEvent",
+                "desc": "你被传送至赛道地图2的第一格",
+                "cell": 1
+            }
+        },
+        "11": {
+            "event": "DropDropRandomItemWithoutEnoughActionPointEvent",
+            "desc": "目前你处于赛道地图2的第11格 你看到了一个银河星人正在和一个星云星人吵架，嗯？同胞有难，这怎么行！ 你果断上去帮你的同胞吵赢了这个架 在口水战大战三百回合这个过程中 你额外花费了1点体力 【如果体力不足随机扣掉一件道具作为支付】",
+            "decrease_ap": 1
+        },
+        "12": {
+            "event": "NonthingEvent",
+            "desc": "目前你处于赛道地图2的第12格 这里迷雾缭绕 让人看不清楚 战士！请你一定小心谨慎"
+        },
+        "13": {
+            "event": "MoveEvent",
+            "desc": "目前你处于赛道地图2的第13格 不小心进入了一个小型传送门，你找到了捷径，【前进2格】",
+            "step": 2
+        },
+        "14": {
+            "event": "GetItemEvent",
+            "desc": "目前你处于赛道地图2的第14格 你来到了一个很奇怪的屋子前面 你走上前敲了敲门 门打开了 一阵雾让你陷入了昏迷 醒来后你发现你多了一个背包 打开里面是一支致幻剂 还有一个字条 恭喜你触发神秘礼物【道具+1】",
+            "item": "致幻剂",
+            "count": 1
+        },
+        "15": {
+            "event": "NonthingEvent",
+            "desc": "目前你处于赛道地图2的第15格 这里迷雾缭绕 让人看不清楚 战士！请你一定小心谨慎"
+        },
+        "16": {
+            "event": "NonthingEvent",
+            "desc": "目前你处于赛道地图2的第16格 你发现了两张疑似同胞遗留下来的字条 第一条写着前面有危险 推荐使用传送门 第二条写着 前面有好东西 不要使用传送门 使用传送门可能会遇到危险"
+        },
+        "17": {
+            "event": "GetItemEvent",
+            "desc": "目前你处于赛道地图2的第17格 你发现了一个背包 里面是一支体力药水！【道具+1】",
+            "item": "致幻剂",
+            "count": 1
+        },
+        "18": {
+            "event": "GetItemEvent",
+            "desc": "目前你处于赛道地图2的第18格 你发现了一个背包 里面是一负面buff消除剂x1！【道具+1】",
+            "item": "负面buff消除剂",
+            "count": 1
+        },
+        "19": {
+            "event": "NonthingEvent",
+            "desc": "目前你处于赛道地图2的第19格 这里迷雾缭绕 让人看不清楚 战士！请你一定小心谨慎"
+        },
+        "20": {
+            "event": "DropAllItemEvent",
+            "desc": "目前你处于赛道地图B的第20格 你受到了袭击 醒来以后发现你的背包丢了 【所有道具遗失】"
+        },
+        "21": {
+            "event": "LocaionEvent",
+            "desc": "目前你处于赛道地图2的第21格 恭喜你 踩到了一个不稳定的传送门 你回到了赛道地图2的第一格",
+            "cell": 1
+        },
+        "22": {
+            "event": "NonthingEvent",
+            "desc": "目前你处于赛道地图2的第22格 这里迷雾缭绕 让人看不清楚 战士！请你一定小心谨慎"
+        },
+        "23": {
+            "event": "DeathOrAliveEvent",
+            "desc": "目前你处于赛道地图2的第23格 你误闯了一个神秘的地方 一个神秘人给你了一个选择题 问题是：林一帅不帅？\nA. 很帅\nB. 帅个屁\n你的回答是：",
+            "alive": {
+                "key": "A",
+                "event": "LocaionEvent",
+                "desc": "恭喜你 帅哥林一将你传送至赛道地图2的第一格",
+                "cell": 1
+            },
+            "death": {
+                "key": "B",
+                "event": "GetItemEvent",
+                "desc": "恭喜你 神秘人送了你一支体力药水【道具+1】",
+                "item": "体力药水",
+                "count": 1
+            }
+        },
+        "24": {
+            "event": "DeathOrAliveEvent",
+            "desc": "目前你处于赛道地图2的第24格 你误闯了一个神秘的地方 一个神秘人给你了一个选择题 问题是：里卡多帅不帅？\nA. 很帅\nB.帅个屁\n你的回答是：",
+            "alive": {
+                "key": "A",
+                "event": "GetItemEvent",
+                "desc": "恭喜你 获得了帅哥里卡多的馈赠：一支致幻剂",
+                "item": "致幻剂",
+                "count": 1
+            },
+            "death": {
+                "key": "B",
+                "event": "LocaionEvent",
+                "desc": "恭喜你 不帅的里卡多先生将你送回了赛道地图2的第一格",
+                "cell": 1
+            }
+        },
+        "25": {
+            "event": "EndEvent",
+            "desc": "恭喜你已经完成整个宇宙之旅"
         }
     }
 }

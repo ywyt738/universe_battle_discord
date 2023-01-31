@@ -2,7 +2,7 @@
 from discord.ext import commands
 
 from game import db
-from game.exception import PlayerExist, PlayerNotExist
+from game.exception import PlayerExist
 
 
 def new_player():

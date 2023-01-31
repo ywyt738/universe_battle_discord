@@ -152,7 +152,7 @@ cython_debug/
 #.idea/
 
 # tmp db
-./db/
+.db/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json

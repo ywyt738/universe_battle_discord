@@ -17,6 +17,7 @@ class MoveModifier(Modifier):
 class BuffProtocol:
     """Buff/Debuff"""
 
+    player: db.Player
     id: int
     name: str
     cata: int
@@ -53,6 +54,24 @@ class Imprison(BuffProtocol):
         return MoveModifier(disable_move=True)
 
 
+class Weak(BuffProtocol):
+    """虚弱"""
+
+    id = 3
+    name = "虚弱"
+    cata = 1
+    describtion = "移动消耗体力翻倍"
+    phase = "move"
+
+    def get_modifier(self):
+        if self.player.ap - 2 < 0:
+            return MoveModifier(disable_move=True)
+        else:
+            self.player.ap -= 1
+            self.player.save()
+            return MoveModifier(disable_move=False)
+
+
 ENABLE_BUFF: dict[str, Callable] = {
     "肾上腺素": Adrenaline,
     "禁锢": Imprison,
@@ -62,22 +81,19 @@ ENABLE_BUFF: dict[str, Callable] = {
 MODIFIER_DICT: dict[str, Callable] = {"move": MoveModifier}
 
 
-def modifier_factory(buff: db.Buff) -> Modifier:
+def modifier_factory(player: db.Player, buff: db.Buff) -> Modifier:
     buff_cls = ENABLE_BUFF.get(buff.name)
-    return buff_cls().get_modifier()
+    return buff_cls(player).get_modifier()
 
 
 def check_for_interaction(player: db.Player, phase: str) -> tuple[Modifier]:
     """玩家阶段buff/debuff交互"""
-    # player_buff = db.PlayerBuff.select().where(
-    #     db.PlayerBuff.player_id == player.player, db.PlayerBuff.buff.phase == phase
-    # )
     player_buff = (
         db.PlayerBuff.select()
         .join(db.Buff)
         .where((db.Buff.phase == phase) & (db.PlayerBuff.player_id == player))
     )
-    data = [modifier_factory(buff.buff) for buff in player_buff]
+    data = [modifier_factory(player, buff.buff) for buff in player_buff]
     return set(data)
 
 

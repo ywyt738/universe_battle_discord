@@ -32,7 +32,7 @@ class Player:
         db.Player.create(discord_id=discord_id, name=name, camp=camp)
         return cls(discord_id=discord_id)
 
-    def move(self) -> bool:
+    def move(self) -> tuple[bool, int | None]:
         """玩家移动"""
         action_phase = "move"
         if self.player.ap < 1:
@@ -84,6 +84,16 @@ class Player:
         player_items, _ = db.PlayerItems.get_or_create(player_id=self.player, item=item)
         player_items.count += count
         player_items.save()
+
+    @staticmethod
+    def rank():
+        """排名"""
+        query = (
+            db.Player.select()
+            .order_by(db.Player.board.desc(), db.Player.cell.desc())
+            .limit(10)
+        )
+        return query
 
     # def remove_affect(self, buff: str):
     #     """移除buff/debuff"""

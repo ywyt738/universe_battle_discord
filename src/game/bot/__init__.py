@@ -6,5 +6,5 @@ from .command import Admin, User
 
 __all__: Tuple[str, ...] = ("BOT",)
 
-BOT.add_cog(User(BOT))
-BOT.add_cog(Admin(BOT))
+BOT.add_cog(User(bot))
+BOT.add_cog(Admin(bot))

@@ -4,15 +4,7 @@ import json
 from game.player import Player
 
 from . import factory
-from .board import (
-    ActionPointResetEvent,
-    BoardEvent,
-    DropRandomItemEvent,
-    GetItemEvent,
-    MoveEvent,
-    NonthingEvent,
-    TrapEvent,
-)
+from .board import *
 
 GAME_MAP = None
 
@@ -32,6 +24,16 @@ def load_map():
     factory.register("NonthingEvent", NonthingEvent)
     factory.register("TrapEvent", TrapEvent)
     factory.register("GetItemEvent", GetItemEvent)
-    factory.register("ActionPointResetEvent", ActionPointResetEvent)
+    factory.register("ActionPointEvent", ActionPointEvent)
     factory.register("MoveEvent", MoveEvent)
     factory.register("DropRandomItemEvent", DropRandomItemEvent)
+    factory.register(
+        "DropDropRandomItemWithoutEnoughActionPointEvent",
+        DropDropRandomItemWithoutEnoughActionPointEvent,
+    )
+    factory.register("LocaionEvent", LocaionEvent)
+    factory.register("DeathOrAliveEvent", DeathOrAliveEvent)
+    factory.register("PortalEvent", PortalEvent)
+    factory.register("DropAllItemEvent", DropAllItemEvent)
+    factory.register("BuffEvent", BuffEvent)
+    factory.register("EndEvent", EndEvent)

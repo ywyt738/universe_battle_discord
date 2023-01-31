@@ -17,7 +17,9 @@ class ItemProtocol:
     describtion: str
 
     def __init__(
-        self, player: discord.User, target_player: discord.User = None
+        self,
+        player: discord.User,
+        target_player: discord.User = None,
     ) -> None:
         self.player = player
         self.target_player = target_player
