@@ -18,7 +18,7 @@ def get_board_event(player: Player) -> BoardEvent:
 def load_map():
     """加载地图文件"""
     global GAME_MAP
-    with open("map.json", "r", encoding="utf-8") as mapfile:
+    with open("db/map.json", "r", encoding="utf-8") as mapfile:
         GAME_MAP = json.load(mapfile)
     # loader.load_plugins()
     factory.register("NonthingEvent", NonthingEvent)
