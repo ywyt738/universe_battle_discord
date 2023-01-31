@@ -15,11 +15,11 @@ RUN mkdir __pypackages__ && pdm install --prod --no-lock --no-editable --no-self
 
 
 # run stage
-FROM python:3.8
+FROM python:3.11.1-slim
 
 # retrieve packages from build stage
 ENV PYTHONPATH=/project/pkgs
-COPY --from=builder /project/__pypackages__/3.8/lib /project/pkgs
+COPY --from=builder /project/__pypackages__/3.11/lib /project/pkgs
 
 # set command/entrypoint, adapt to fit your needs
 CMD ["python", "src/main.py"]
