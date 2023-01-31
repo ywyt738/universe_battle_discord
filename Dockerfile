@@ -1,11 +1,25 @@
-FROM python:3.10.1-slim
+# build stage
+FROM python:3.11.1-slim AS builder
 
-WORKDIR /usr/src/app
+# install PDM
+RUN pip install -U pip setuptools wheel
+RUN pip install pdm
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+# copy files
+COPY pyproject.toml pdm.lock README.md /project/
+COPY src/ /project/src
 
-RUN mkdir db
-COPY . .
+# install dependencies and project into the local packages directory
+WORKDIR /project
+RUN mkdir __pypackages__ && pdm install --prod --no-lock --no-editable --no-self
 
-CMD [ "python", "./src/main.py" ]
+
+# run stage
+FROM python:3.8
+
+# retrieve packages from build stage
+ENV PYTHONPATH=/project/pkgs
+COPY --from=builder /project/__pypackages__/3.8/lib /project/pkgs
+
+# set command/entrypoint, adapt to fit your needs
+CMD ["python", "src/main.py"]
